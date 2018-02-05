@@ -104,14 +104,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void createScoreMessage(View view) {
 
-        validate();
+        score = validate();
         String playerName = nameSpace.getText().toString();
-        TextView totalScore = findViewById(R.id.score_field);
         if (playerName.equals("")) {
             playerName = getString(R.string.dear_john);
         }
+        String message = playerName + "\nYour score is: " + score;
+        TextView totalScore = findViewById(R.id.score_field);
+
 //        totalScore.setText(getString(R.string.score_text));
-        totalScore.setText(String.valueOf(score));
+        totalScore.setText(message);
 
     }
 
