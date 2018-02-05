@@ -1,0 +1,32 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Udacity Oscars Quiz</string>
+    <string name="question_2">Who won 2017/18 Udacity Oscar for Best Performance by an Actor in a Supporting Role in any Motion Picture</string>
+    <string name="question_1">Who won 2017/18 Udacity Oscar for Best Performance by an Actress in a Motion Picture - Comedy</string>
+    <string name="answer_1">Catherine Zeta-Jones</string>
+    <string name="answer_2">Catherine Deneuve</string>
+    <string name="answer_3">Katherine Kuan</string>
+    <string name="answer_1_4">Katharine Hepburn</string>
+    <string name="answer_2_1">Kunal Kapoor</string>
+    <string name="answer_2_2">Kunal Chawla</string>
+    <string name="answer_2_3">Kunal Nayyar</string>
+    <string name="answer_2_4">Kunal Khemu</string>
+    <string name="answer_4_4">Quiz App</string>
+    <string name="answer_3_1">Lyla Fujiwara</string>
+    <string name="answer_4_3">Court Counter App</string>
+    <string name="answer_4_2">Hello Android</string>
+    <string name="answer_4_1">Happy Birthday Card</string>
+    <string name="answer_3_2">Laila Mehdin</string>
+    <string name="answer_3_3">Laila Mehdin</string>
+    <string name="answer_3_4">Samson and Delilah</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="question_3">Who won 2017/18 Udacity Oscar for Best Performance by an Actress in a Supporting Role in any Motion Picture</string>
+    <string name="btnSubmit_text">Get Your Score</string>
+    <string name="score_text"><xliff:g id="total_score" example="3">%d</xliff:g>/5</string>
+    <string name="title_1">Welcome to</string>
+    <string name="title_2">Udacity</string>
+    <string name="title_3">Oscars Quiz</string>
+    <string name="share_result_btn_text">Share Result</string>
+    <string name="try_again_btn_txt">Try Again?</string>
+    <string name="dear_john">Dear Stranger, </string>
+</resources>

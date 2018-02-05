@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context="com.example.android.udacityoscarsquiz.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_oscars"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:text="@string/title_1"
+                style="@style/HeaderView"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="@string/title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/HeaderView"
+                />
+
+            <TextView
+                android:text="@string/title_3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/HeaderView"
+                />
+        </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/name_space"
+                style="@style/EditTextView"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/question1_text"
+            style="@style/QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                style="@style/RadioGroupView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb1a"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/courierprime"
+
+                    android:text="@string/answer_1" />
+
+                <RadioButton
+                    android:id="@+id/rb1b"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/answer_2" />
+
+                <RadioButton
+                    android:id="@+id/rb1c"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_3" />
+
+                <RadioButton
+                    android:id="@+id/rb1d"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_1_4" />
+            </RadioGroup>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/katherine_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:background="@drawable/frame_bg"
+                android:padding="@dimen/margin_6"
+
+                android:src="@drawable/cathrine"
+                app:civ_border_color="@color/bgColor"
+                app:civ_border_width="2dp" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/question4_text"
+            style="@style/QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg4"
+                style="@style/RadioGroupView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb4a"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/courierprime"
+
+                    android:text="@string/answer_4_1" />
+
+                <RadioButton
+                    android:id="@+id/rb4b"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/answer_4_2" />
+
+                <RadioButton
+                    android:id="@+id/rb4c"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_4_3" />
+
+                <RadioButton
+                    android:id="@+id/rb4d"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_4_4" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/question2_text"
+            style="@style/QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/kunal_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_weight="1"
+                android:background="@drawable/frame_bg"
+                android:padding="@dimen/margin_6"
+
+                android:src="@drawable/kunal"
+                app:civ_border_color="@color/bgColor"
+                app:civ_border_width="2dp" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                style="@style/RadioGroupView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb2a"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/courierprime"
+
+                    android:text="@string/answer_2_1" />
+
+                <RadioButton
+                    android:id="@+id/rb2b"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/answer_2_2" />
+
+                <RadioButton
+                    android:id="@+id/rb2c"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_2_3" />
+
+                <RadioButton
+                    android:id="@+id/rb2d"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_2_4" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/question3_text"
+            style="@style/QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                style="@style/RadioGroupView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb3a"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/courierprime"
+
+                    android:text="@string/answer_3_1" />
+
+                <RadioButton
+                    android:id="@+id/rb3b"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/answer_3_2" />
+
+                <RadioButton
+                    android:id="@+id/rb3c"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_3_3" />
+
+                <RadioButton
+                    android:id="@+id/rb3d"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_3_4" />
+            </RadioGroup>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/lyla_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:background="@drawable/frame_bg"
+                android:padding="@dimen/margin_6"
+
+                android:src="@drawable/lyla1"
+                app:civ_border_color="@color/bgColor"
+                app:civ_border_width="2dp" />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/SubmitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnSubmit_text"
+                android:background="@drawable/buttonshape"
+                android:onClick="createScoreMessage"
+                />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/score_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wohoo"
+            android:textSize="@dimen/big_text"
+            android:layout_margin="@dimen/margin_24"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnShare"
+                style="@style/SmallBtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share_result_btn_text"
+                android:background="@drawable/buttonshape2"
+                />
+
+            <Button
+                android:id="@+id/btnTryAgain"
+                style="@style/SmallBtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/try_again_btn_txt"
+                android:background="@drawable/buttonshape2"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
+
+
