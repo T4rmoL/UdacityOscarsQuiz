@@ -8,10 +8,10 @@
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="titleFontSize">34sp</dimen>
-    <dimen name="textSize">13sp</dimen>
+    <dimen name="textSize">15sp</dimen>
     <dimen name="correctAnswerSize">24sp</dimen>
     <dimen name="editTextSize">24sp</dimen>
 
     <dimen name="toast_text_size">28sp</dimen>
-    <dimen name="big_text">32sp</dimen>
+    <dimen name="big_text">40sp</dimen>
 </resources>

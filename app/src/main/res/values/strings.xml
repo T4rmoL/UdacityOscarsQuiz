@@ -28,7 +28,7 @@
     <string name="title_3">Oscars Quiz</string>
     <string name="share_result_btn_text">Share Result</string>
     <string name="try_again_btn_txt">Try Again?</string>
-    <string name="dear_john">Dear Stranger, </string>
+    <string name="dear_john">Mr/Mrs Stranger </string>
     <string name="answer_5_1">Meryl Streep</string>
     <string name="answer_5_2">Woody Harrelson</string>
     <string name="answer_5_3">Coco</string>
@@ -37,6 +37,9 @@
     <string name="quatio_4">Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS</string>
     <string name="toast_1">"Tell me a person who doesn´t \nlike Meryl Streep"</string>
     <string name="toast_2">"He is The Man!!"</string>
-    <string name="toast_3">"Really!? Animation figure!?"</string>
+    <string name="toast_3">"Really!? Animation character!?"</string>
     <string name="toast_4">"Oooh Mama!! \nOooh Yes!"</string>
+    <string name="shareMessage1">"Check this out! \n"</string>
+    <string name="shareMessage2">"\nhas scored \n"</string>
+    <string name="shareMessage3">"\nat Udacity Oscar Quiz!"</string>
 </resources>

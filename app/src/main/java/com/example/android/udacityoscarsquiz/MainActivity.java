@@ -1,6 +1,8 @@
 package com.example.android.udacityoscarsquiz;
 
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -155,20 +157,32 @@ public class MainActivity extends AppCompatActivity {
     public void createScoreMessage(View view) {
 
         score = validate();
+        TextView totalScore = findViewById(R.id.score_field);
+        totalScore.setText(getString(R.string.score_text, score));
+
+
+    }
+
+
+    public void createShareeMessage(View view) {
+
         String playerName = nameSpace.getText().toString();
         if (playerName.equals("")) {
             playerName = getString(R.string.dear_john);
         }
-        String message = playerName + "\nYour score is: " + score;
-        TextView totalScore = findViewById(R.id.score_field);
-        totalScore.setText(message);
-        totalScore.setText(getString(R.string.score_text, score));
-//        if (score > 5) {
-//            btnSubmit.setEnabled(false);
-//        }
+        String message = getString(R.string.shareMessage1) + playerName + getString(R.string.shareMessage2) + getString(R.string.score_text, score) + getString(R.string.shareMessage3);
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Udacity Quiz results for " + playerName);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+
+        }
 
 
     }
+
 
 
 

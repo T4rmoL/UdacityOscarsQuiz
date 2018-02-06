@@ -400,17 +400,18 @@
                 android:id="@+id/btnShare"
                 style="@style/SmallBtn"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/share_result_btn_text"
                 android:background="@drawable/buttonshape2"
+                android:onClick="createShareeMessage"
                 />
 
             <Button
                 android:id="@+id/btnTryAgain"
                 style="@style/SmallBtn"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/try_again_btn_txt"
                 android:background="@drawable/buttonshape2"

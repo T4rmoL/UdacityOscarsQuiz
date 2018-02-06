@@ -46,9 +46,10 @@
         <item name="android:background">@drawable/frame_bg</item>
         <item name="android:textSize">@dimen/editTextSize</item>
         <item name="android:inputType">textCapWords</item>
+        <item name="android:gravity">center</item>
         <item name="android:fontFamily">@font/courierprime</item>
         <item name="android:textColor">@color/colorPrimary</item>
-    </style>
+    </style>=
 
     <style name="HeaderView">
         <item name="android:layout_marginRight">@dimen/margin_16</item>
