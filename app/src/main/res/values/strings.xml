@@ -35,4 +35,8 @@
     <string name="answer_5_4">Mary J. Blige</string>
     <string name="question_5">Which of these 2018 Oscars nominees would you like to see in your next Udacity course Youtube videos</string>
     <string name="quatio_4">Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS</string>
+    <string name="toast_1">"Tell me a person who doesn´t \nlike Meryl Streep"</string>
+    <string name="toast_2">"He is The Man!!"</string>
+    <string name="toast_3">"Really!? Animation figure!?"</string>
+    <string name="toast_4">"Oooh Mama!! \nOooh Yes!"</string>
 </resources>

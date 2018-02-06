@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
     int score = 0;
-    Button btnSubmit, btnShare, btnTryAgain;
     EditText nameSpace;
     RadioGroup rg5;
 
@@ -47,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
          rb4b  =  findViewById(R.id.rb4b);
          rb4c  =  findViewById(R.id.rb4c);
          rb4d  =  findViewById(R.id.rb4d);
-        rb5a  =  findViewById(R.id.rb5a);
-        rb5b  =  findViewById(R.id.rb5b);
-        rb5c  =  findViewById(R.id.rb5c);
-        rb5d  =  findViewById(R.id.rb5d);
+         rb5a  =  findViewById(R.id.rb5a);
+         rb5b  =  findViewById(R.id.rb5b);
+         rb5c  =  findViewById(R.id.rb5c);
+         rb5d  =  findViewById(R.id.rb5d);
         final Typeface font = Typeface.createFromAsset(getResources().getAssets(), "courierprime.ttf");
         rb1a.setTypeface(font);
         rb1b.setTypeface(font);
@@ -79,30 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.rb5a:
-                if (checked)
-                    Toast.makeText(this, "Tell me a person who doesn´t \nlike Meryl Streep", Toast.LENGTH_SHORT).show();
-                    break;
-            case R.id.rb5b:
-                if (checked)
-                    Toast.makeText(this, "He is The Man!!", Toast.LENGTH_SHORT).show();
-                    break;
-            case R.id.rb5c:
-                if (checked)
-                    Toast.makeText(this, "Really!? Animation figure!?", Toast.LENGTH_SHORT).show();
-                    break;
-            case R.id.rb5d:
-                if (checked)
-                    Toast.makeText(this, "Really!? Animation figure!?", Toast.LENGTH_SHORT).show();
-                    break;
-        }
-    }
 
     private int validate() {
         if (rb1c.isChecked()) {
@@ -133,10 +107,50 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
 
-        Log.v("Main Activity", "Score is: " + score);
+        if (rb5a.isChecked()) {
+            score++;
+        }
+
+        if (rb5b.isChecked()) {
+            score++;
+        }
+
+        if (rb5c.isChecked()) {
+            score++;
+        }
+
+        if (rb5d.isChecked()) {
+            score++;
+        }
+
         return score;
 
+    }
 
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.rb5a:
+                if (checked)
+                    Toast.makeText(this, getString(R.string.toast_1), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rb5b:
+                if (checked)
+                    Toast.makeText(this, getString(R.string.toast_2), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rb5c:
+                if (checked)
+                    Toast.makeText(this, getString(R.string.toast_3), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rb5d:
+                if (checked)
+                    Toast.makeText(this, getString(R.string.toast_4), Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
     public void createScoreMessage(View view) {
 
@@ -160,7 +174,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-//java.lang.RuntimeException: Font asset not found courierprime.ttf
-//RadioButton rb  = (RadioButton) findViewById(R.id.rb1a);
-//    Typeface font = Typeface.createFromAsset(getAssets(), "font/courierprime.ttf");
-//        rb.setTypeface(font);
