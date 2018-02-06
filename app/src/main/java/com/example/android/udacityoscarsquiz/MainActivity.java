@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d;
+    RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d;
     int score = 0;
     EditText nameSpace;
 
@@ -29,22 +30,22 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
-        RadioButton rb1a  =  findViewById(R.id.rb1a);
-        RadioButton rb1b  =  findViewById(R.id.rb1b);
-        RadioButton rb1c  =  findViewById(R.id.rb1c);
-        RadioButton rb1d  =  findViewById(R.id.rb1d);
-        RadioButton rb2a  =  findViewById(R.id.rb2a);
-        RadioButton rb2b  =  findViewById(R.id.rb2b);
-        RadioButton rb2c  =  findViewById(R.id.rb2c);
-        RadioButton rb2d  =  findViewById(R.id.rb2d);
-        RadioButton rb3a  =  findViewById(R.id.rb3a);
-        RadioButton rb3b  =  findViewById(R.id.rb3b);
-        RadioButton rb3c  =  findViewById(R.id.rb3c);
-        RadioButton rb3d  =  findViewById(R.id.rb3d);
-        RadioButton rb4a  =  findViewById(R.id.rb4a);
-        RadioButton rb4b  =  findViewById(R.id.rb4b);
-        RadioButton rb4c  =  findViewById(R.id.rb4c);
-        RadioButton rb4d  =  findViewById(R.id.rb4d);
+         rb1a  =  findViewById(R.id.rb1a);
+         rb1b  =  findViewById(R.id.rb1b);
+         rb1c  =  findViewById(R.id.rb1c);
+         rb1d  =  findViewById(R.id.rb1d);
+         rb2a  =  findViewById(R.id.rb2a);
+         rb2b  =  findViewById(R.id.rb2b);
+         rb2c  =  findViewById(R.id.rb2c);
+         rb2d  =  findViewById(R.id.rb2d);
+         rb3a  =  findViewById(R.id.rb3a);
+         rb3b  =  findViewById(R.id.rb3b);
+         rb3c  =  findViewById(R.id.rb3c);
+         rb3d  =  findViewById(R.id.rb3d);
+         rb4a  =  findViewById(R.id.rb4a);
+         rb4b  =  findViewById(R.id.rb4b);
+         rb4c  =  findViewById(R.id.rb4c);
+         rb4d  =  findViewById(R.id.rb4d);
         final Typeface font = Typeface.createFromAsset(getResources().getAssets(), "courierprime.ttf");
         rb1a.setTypeface(font);
         rb1b.setTypeface(font);
@@ -72,19 +73,8 @@ public class MainActivity extends AppCompatActivity {
         if (rb1c.isChecked()) {
             score++;
         }
-        if (rb2a.isChecked()) {
-            score++;
-        }
 
         if (rb2b.isChecked()) {
-            score++;
-        }
-
-        if (rb2c.isChecked()) {
-            score++;
-        }
-
-        if (rb2d.isChecked()) {
             score++;
         }
 
@@ -97,7 +87,19 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
 
-//        Log.v("Main Activity", "Score is: " + score);
+        if (rb4b.isChecked()) {
+            score++;
+        }
+
+        if (rb4c.isChecked()) {
+            score++;
+        }
+
+        if (rb4d.isChecked()) {
+            score++;
+        }
+
+        Log.v("Main Activity", "Score is: " + score);
         return score;
 
 
@@ -111,9 +113,9 @@ public class MainActivity extends AppCompatActivity {
         }
         String message = playerName + "\nYour score is: " + score;
         TextView totalScore = findViewById(R.id.score_field);
-
-//        totalScore.setText(getString(R.string.score_text));
         totalScore.setText(message);
+        totalScore.setText(getString(R.string.score_text, score));
+
 
     }
 
