@@ -44,4 +44,5 @@
     <string name="shareMessage1">"Check this out! \n"</string>
     <string name="shareMessage2">"\nhas scored \n"</string>
     <string name="shareMessage3">"\nat Udacity Oscar Quiz!"</string>
+    <string name="shareMessage4">"Udacity Quiz results for "</string>
 </resources>

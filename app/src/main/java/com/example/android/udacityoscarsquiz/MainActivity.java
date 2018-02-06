@@ -5,7 +5,6 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -185,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         String message = getString(R.string.shareMessage1) + playerName + getString(R.string.shareMessage2) + getString(R.string.score_text, score) + getString(R.string.shareMessage3);
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Udacity Quiz results for " + playerName);
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.shareMessage4) + playerName);
         intent.putExtra(Intent.EXTRA_TEXT, message);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
