@@ -29,4 +29,10 @@
     <string name="share_result_btn_text">Share Result</string>
     <string name="try_again_btn_txt">Try Again?</string>
     <string name="dear_john">Dear Stranger, </string>
+    <string name="answer_5_1">Meryl Streep</string>
+    <string name="answer_5_2">Woody Harrelson</string>
+    <string name="answer_5_3">Coco</string>
+    <string name="answer_5_4">Mary J. Blige</string>
+    <string name="question_5">Which of these 2018 Oscars nominees would you like to see in your next Udacity course Youtube videos</string>
+    <string name="quatio_4">Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS</string>
 </resources>

@@ -1,10 +1,8 @@
 package com.example.android.udacityoscarsquiz;
 
 import android.graphics.Typeface;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -12,14 +10,17 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Spinner;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d;
+    RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
     int score = 0;
+    Button btnSubmit, btnShare, btnTryAgain;
     EditText nameSpace;
+    RadioGroup rg5;
 
 
     @Override
@@ -46,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
          rb4b  =  findViewById(R.id.rb4b);
          rb4c  =  findViewById(R.id.rb4c);
          rb4d  =  findViewById(R.id.rb4d);
+        rb5a  =  findViewById(R.id.rb5a);
+        rb5b  =  findViewById(R.id.rb5b);
+        rb5c  =  findViewById(R.id.rb5c);
+        rb5d  =  findViewById(R.id.rb5d);
         final Typeface font = Typeface.createFromAsset(getResources().getAssets(), "courierprime.ttf");
         rb1a.setTypeface(font);
         rb1b.setTypeface(font);
@@ -63,10 +68,40 @@ public class MainActivity extends AppCompatActivity {
         rb4b.setTypeface(font);
         rb4c.setTypeface(font);
         rb4d.setTypeface(font);
+        rb5a.setTypeface(font);
+        rb5b.setTypeface(font);
+        rb5c.setTypeface(font);
+        rb5d.setTypeface(font);
         nameSpace = findViewById(R.id.name_space);
+        rg5 = findViewById(R.id.rg5);
 
 
 
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.rb5a:
+                if (checked)
+                    Toast.makeText(this, "Tell me a person who doesn´t \nlike Meryl Streep", Toast.LENGTH_SHORT).show();
+                    break;
+            case R.id.rb5b:
+                if (checked)
+                    Toast.makeText(this, "He is The Man!!", Toast.LENGTH_SHORT).show();
+                    break;
+            case R.id.rb5c:
+                if (checked)
+                    Toast.makeText(this, "Really!? Animation figure!?", Toast.LENGTH_SHORT).show();
+                    break;
+            case R.id.rb5d:
+                if (checked)
+                    Toast.makeText(this, "Really!? Animation figure!?", Toast.LENGTH_SHORT).show();
+                    break;
+        }
     }
 
     private int validate() {
@@ -78,8 +113,7 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
 
-
-        if (rb3b.isChecked()) {
+        if (rb3a.isChecked()) {
             score++;
         }
 
@@ -115,11 +149,12 @@ public class MainActivity extends AppCompatActivity {
         TextView totalScore = findViewById(R.id.score_field);
         totalScore.setText(message);
         totalScore.setText(getString(R.string.score_text, score));
+//        if (score > 5) {
+//            btnSubmit.setEnabled(false);
+//        }
 
 
     }
-
-
 
 
 

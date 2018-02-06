@@ -83,5 +83,12 @@
 
     </style>
 
+    <style name="ScoreField">
+        <item name="android:layout_margin">@dimen/margin_24</item>
+        <item name="android:fontFamily">@font/ttdirectors_regular</item>
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
 </resources>
 

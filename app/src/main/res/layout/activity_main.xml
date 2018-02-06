@@ -125,7 +125,7 @@
             style="@style/QuestionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS" />
+            android:text="@string/quatio_4" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -244,6 +244,62 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/question5_text"
+            style="@style/QuestionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg5"
+                style="@style/RadioGroupView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb5a"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/courierprime"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer_5_1" />
+
+                <RadioButton
+                    android:id="@+id/rb5b"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer_5_2" />
+
+                <RadioButton
+                    android:id="@+id/rb5c"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer_5_3" />
+
+                <RadioButton
+                    android:id="@+id/rb5d"
+                    style="@style/RadioButtonView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/answer_5_4" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <TextView
             android:id="@+id/question3_text"
             style="@style/QuestionTextView"
             android:layout_width="wrap_content"
@@ -330,12 +386,11 @@
 
         <TextView
             android:id="@+id/score_field"
+            style="@style/ScoreField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wohoo"
-            android:textSize="@dimen/big_text"
-            android:layout_margin="@dimen/margin_24"
-            />
+            android:text="" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
