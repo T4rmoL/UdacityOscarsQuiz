@@ -16,6 +16,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Declearing global variables
+     */
+
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
     int score = 0;
     EditText nameSpace;
@@ -82,7 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Calculating the score
+     */
     private int validate() {
         if (rb1c.isChecked()) {
             score++;
@@ -132,7 +138,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Checks what RadioButton is clicked for question 4 and displays a Toast message accordingly
+     */
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -157,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    /**
+     * Creates score message and displays it when clicked "Show Results" button
+     */
+
     public void createScoreMessage(View view) {
 
         score = validate();
@@ -173,9 +186,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    /**
+     * This method is called when the "Share Result" button is clicked
+     */
 
-
-    public void createShareeMessage(View view) {
+    public void createShareMessage(View view) {
 
         String playerName = nameSpace.getText().toString();
         if (playerName.equals("")) {
@@ -193,6 +208,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    /**
+     * This method is called when the "Try Again" button is clicked.
+     */
 
     public void  uncheckButtons(View view) {
         rg1.clearCheck();

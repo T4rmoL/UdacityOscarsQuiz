@@ -404,7 +404,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/share_result_btn_text"
                 android:background="@drawable/buttonshape2"
-                android:onClick="createShareeMessage"
+                android:onClick="createShareMessage"
                 />
 
             <Button
