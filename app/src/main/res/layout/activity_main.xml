@@ -415,6 +415,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/try_again_btn_txt"
                 android:background="@drawable/buttonshape2"
+                android:onClick="uncheckButtons"
                 />
 
 

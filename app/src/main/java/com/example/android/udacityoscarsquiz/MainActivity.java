@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
     int score = 0;
     EditText nameSpace;
-    RadioGroup rg5;
+    RadioGroup rg1, rg2, rg3, rg4, rg5;
 
 
     @Override
@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
         rb5c.setTypeface(font);
         rb5d.setTypeface(font);
         nameSpace = findViewById(R.id.name_space);
+        rg1 = findViewById(R.id.rg1);
+        rg2 = findViewById(R.id.rg2);
+        rg3 = findViewById(R.id.rg3);
+        rg4 = findViewById(R.id.rg4);
         rg5 = findViewById(R.id.rg5);
 
 
@@ -159,6 +163,14 @@ public class MainActivity extends AppCompatActivity {
         score = validate();
         TextView totalScore = findViewById(R.id.score_field);
         totalScore.setText(getString(R.string.score_text, score));
+        if (score == 5) {
+            Toast.makeText(this, getString(R.string.toast_5), Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this, getString(R.string.toast_6), Toast.LENGTH_LONG).show();
+        }
+        score = 0;
+
 
 
     }
@@ -180,6 +192,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
+    }
+
+    public void  uncheckButtons(View view) {
+        rg1.clearCheck();
+        rg2.clearCheck();
+        rg3.clearCheck();
+        rg4.clearCheck();
+        rg5.clearCheck();
+        score = 0;
 
     }
 
