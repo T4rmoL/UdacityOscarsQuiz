@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
     int score = 0;
     EditText nameSpace;
+    Button btnSubmit;
     RadioGroup rg1, rg2, rg3, rg4, rg5;
 
 
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         rg3 = findViewById(R.id.rg3);
         rg4 = findViewById(R.id.rg4);
         rg5 = findViewById(R.id.rg5);
+        btnSubmit = findViewById(R.id.btnSubmit);
 
 
 
@@ -174,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
         score = validate();
         TextView totalScore = findViewById(R.id.score_field);
+        totalScore.setVisibility(View.VISIBLE);
         totalScore.setText(getString(R.string.score_text, score));
         if (score == 5) {
             Toast.makeText(this, getString(R.string.toast_5), Toast.LENGTH_LONG).show();
@@ -181,7 +185,8 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(this, getString(R.string.toast_6), Toast.LENGTH_LONG).show();
         }
-        score = 0;
+
+        btnSubmit.setVisibility(View.INVISIBLE);
 
 
 
@@ -213,12 +218,16 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void  uncheckButtons(View view) {
+        TextView totalScore = findViewById(R.id.score_field);
+        totalScore.setVisibility(View.INVISIBLE);
+        btnSubmit.setVisibility(View.VISIBLE);
         rg1.clearCheck();
         rg2.clearCheck();
         rg3.clearCheck();
         rg4.clearCheck();
         rg5.clearCheck();
         score = 0;
+
 
     }
 
