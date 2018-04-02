@@ -36,26 +36,26 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
-         rb1a  =  findViewById(R.id.rb1a);
-         rb1b  =  findViewById(R.id.rb1b);
-         rb1c  =  findViewById(R.id.rb1c);
-         rb1d  =  findViewById(R.id.rb1d);
-         rb2a  =  findViewById(R.id.rb2a);
-         rb2b  =  findViewById(R.id.rb2b);
-         rb2c  =  findViewById(R.id.rb2c);
-         rb2d  =  findViewById(R.id.rb2d);
-         rb3a  =  findViewById(R.id.rb3a);
-         rb3b  =  findViewById(R.id.rb3b);
-         rb3c  =  findViewById(R.id.rb3c);
-         rb3d  =  findViewById(R.id.rb3d);
-         rb4a  =  findViewById(R.id.rb4a);
-         rb4b  =  findViewById(R.id.rb4b);
-         rb4c  =  findViewById(R.id.rb4c);
-         rb4d  =  findViewById(R.id.rb4d);
-         rb5a  =  findViewById(R.id.rb5a);
-         rb5b  =  findViewById(R.id.rb5b);
-         rb5c  =  findViewById(R.id.rb5c);
-         rb5d  =  findViewById(R.id.rb5d);
+        rb1a = findViewById(R.id.rb1a);
+        rb1b = findViewById(R.id.rb1b);
+        rb1c = findViewById(R.id.rb1c);
+        rb1d = findViewById(R.id.rb1d);
+        rb2a = findViewById(R.id.rb2a);
+        rb2b = findViewById(R.id.rb2b);
+        rb2c = findViewById(R.id.rb2c);
+        rb2d = findViewById(R.id.rb2d);
+        rb3a = findViewById(R.id.rb3a);
+        rb3b = findViewById(R.id.rb3b);
+        rb3c = findViewById(R.id.rb3c);
+        rb3d = findViewById(R.id.rb3d);
+        rb4a = findViewById(R.id.rb4a);
+        rb4b = findViewById(R.id.rb4b);
+        rb4c = findViewById(R.id.rb4c);
+        rb4d = findViewById(R.id.rb4d);
+        rb5a = findViewById(R.id.rb5a);
+        rb5b = findViewById(R.id.rb5b);
+        rb5c = findViewById(R.id.rb5c);
+        rb5d = findViewById(R.id.rb5d);
         final Typeface font = Typeface.createFromAsset(getResources().getAssets(), "courierprime.ttf");
         rb1a.setTypeface(font);
         rb1b.setTypeface(font);
@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
         rg4 = findViewById(R.id.rg4);
         rg5 = findViewById(R.id.rg5);
         btnSubmit = findViewById(R.id.btnSubmit);
-
 
 
     }
@@ -149,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.rb5a:
                 if (checked)
                     Toast.makeText(this, getString(R.string.toast_1), Toast.LENGTH_SHORT).show();
@@ -181,16 +180,15 @@ public class MainActivity extends AppCompatActivity {
         totalScore.setText(getString(R.string.score_text, score));
         if (score == 5) {
             Toast.makeText(this, getString(R.string.toast_5), Toast.LENGTH_LONG).show();
-        }
-        else {
+        } else {
             Toast.makeText(this, getString(R.string.toast_6), Toast.LENGTH_LONG).show();
         }
 
         btnSubmit.setVisibility(View.INVISIBLE);
 
 
-
     }
+
     /**
      * This method is called when the "Share Result" button is clicked
      */
@@ -213,11 +211,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     /**
      * This method is called when the "Try Again" button is clicked.
      */
 
-    public void  uncheckButtons(View view) {
+    public void uncheckButtons(View view) {
         TextView totalScore = findViewById(R.id.score_field);
         totalScore.setVisibility(View.INVISIBLE);
         btnSubmit.setVisibility(View.VISIBLE);
@@ -230,9 +229,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
-
 
 
 }
