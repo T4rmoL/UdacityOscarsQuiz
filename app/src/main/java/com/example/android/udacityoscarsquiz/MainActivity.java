@@ -1,5 +1,6 @@
 package com.example.android.udacityoscarsquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -17,15 +19,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     /**
      * Declearing global variables
      */
 
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b, rb4c, rb4d, rb5a, rb5b, rb5c, rb5d;
+    CheckBox cb1a, cb1b, cb1c, cb1d;
     int score = 0;
-    EditText nameSpace;
+    EditText nameSpace, answer6;
     Button btnSubmit;
     RadioGroup rg1, rg2, rg3, rg4, rg5;
+    boolean state = false;
 
 
     @Override
@@ -34,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // prevent from opening keyboard on creation
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         setContentView(R.layout.activity_main);
         rb1a = findViewById(R.id.rb1a);
@@ -56,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         rb5b = findViewById(R.id.rb5b);
         rb5c = findViewById(R.id.rb5c);
         rb5d = findViewById(R.id.rb5d);
+        cb1a = findViewById(R.id.cb1a);
+        cb1b = findViewById(R.id.cb1b);
+        cb1c = findViewById(R.id.cb1c);
+        cb1d = findViewById(R.id.cb1d);
         final Typeface font = Typeface.createFromAsset(getResources().getAssets(), "courierprime.ttf");
         rb1a.setTypeface(font);
         rb1b.setTypeface(font);
@@ -78,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         rb5c.setTypeface(font);
         rb5d.setTypeface(font);
         nameSpace = findViewById(R.id.name_space);
+        answer6 = findViewById(R.id.answer6);
         rg1 = findViewById(R.id.rg1);
         rg2 = findViewById(R.id.rg2);
         rg3 = findViewById(R.id.rg3);
@@ -136,6 +150,15 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
 
+        String samRockwell = answer6.getText().toString();
+        if (samRockwell.trim().equalsIgnoreCase("sam rockwell")) {
+            score++;
+        }
+
+        if (cb1a.isChecked() & (cb1c.isChecked()))  {
+            score++;
+        }
+
         return score;
 
     }
@@ -178,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
         TextView totalScore = findViewById(R.id.score_field);
         totalScore.setVisibility(View.VISIBLE);
         totalScore.setText(getString(R.string.score_text, score));
-        if (score == 5) {
+        if (score == 7) {
             Toast.makeText(this, getString(R.string.toast_5), Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(this, getString(R.string.toast_6), Toast.LENGTH_LONG).show();
@@ -214,6 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * This method is called when the "Try Again" button is clicked.
+     * All RadioButtons, text fields and Checkboxes are cleared.
      */
 
     public void uncheckButtons(View view) {
@@ -225,6 +249,12 @@ public class MainActivity extends AppCompatActivity {
         rg3.clearCheck();
         rg4.clearCheck();
         rg5.clearCheck();
+        cb1a.setChecked(state);
+        cb1b.setChecked(state);
+        cb1c.setChecked(state);
+        cb1d.setChecked(state);
+        answer6.setText("");
+        nameSpace.setText("");
         score = 0;
 
 

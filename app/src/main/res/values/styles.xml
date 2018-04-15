@@ -37,12 +37,26 @@
         <item name="android:layout_marginBottom">@dimen/margin_16</item>
     </style>
 
-    <style name="EditTextView">
+    <style name="EditTextView1">
         <item name="android:layout_margin">@dimen/margin_8</item>
         <item name="android:paddingTop">@dimen/margin_4</item>
         <item name="android:paddingBottom">@dimen/margin_4</item>
         <item name="android:paddingLeft">@dimen/margin_8</item>
         <item name="android:hint">@string/enter_your_name</item>
+        <item name="android:background">@drawable/frame_bg</item>
+        <item name="android:textSize">@dimen/editTextSize</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/courierprime</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="EditTextView2">
+        <item name="android:layout_margin">@dimen/margin_8</item>
+        <item name="android:paddingTop">@dimen/margin_4</item>
+        <item name="android:paddingBottom">@dimen/margin_4</item>
+        <item name="android:paddingLeft">@dimen/margin_8</item>
+        <item name="android:hint">@string/type_your_answer</item>
         <item name="android:background">@drawable/frame_bg</item>
         <item name="android:textSize">@dimen/editTextSize</item>
         <item name="android:inputType">textCapWords</item>

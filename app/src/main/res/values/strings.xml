@@ -19,9 +19,10 @@
     <string name="answer_4_2">Hello Android</string>
     <string name="answer_4_1">Happy Birthday Card</string>
     <string name="enter_your_name">Enter Your Name</string>
+    <string name="type_your_answer">Type Your Answer</string>
     <string name="question_3">Who won 2017/18 Udacity Oscar for Best Performance by an Actress in a Supporting Role in any Motion Picture</string>
     <string name="btnSubmit_text">Get Your Score</string>
-    <string name="score_text"><xliff:g example="3" id="total_score">%d</xliff:g>/5</string>
+    <string name="score_text"><xliff:g example="3" id="total_score">%d</xliff:g>/7</string>
     <string name="title_1">Welcome to</string>
     <string name="title_2">Udacity</string>
     <string name="title_3">Oscars Quiz</string>
@@ -33,7 +34,7 @@
     <string name="answer_5_3">Coco</string>
     <string name="answer_5_4">Mary J. Blige</string>
     <string name="question_5">Which of these 2018 Oscars nominees would you like to see in your next Udacity course Youtube videos</string>
-    <string name="quatio_4">Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS</string>
+    <string name="quation_4">Which of your Android projects should win Udacity Oscar for VISUAL EFFECTS</string>
     <string name="toast_1">"Tell me a person who doesn´t \nlike Meryl Streep"</string>
     <string name="toast_2">"He is The Man!!"</string>
     <string name="toast_3">"Really!? Animation character!?"</string>
@@ -44,4 +45,10 @@
     <string name="shareMessage2">"\nhas scored \n"</string>
     <string name="shareMessage3">"\nat Udacity Oscar Quiz!"</string>
     <string name="shareMessage4">"Udacity Quiz results for "</string>
+    <string name="answer_7_1">“Darkest Hour”</string>
+    <string name="answer_7_2">“Forrest Gump”</string>
+    <string name="answer_7_4">“The Big Short”</string>
+    <string name="answer_7_3">“Phantom Thread”</string>
+    <string name="question_7">Which of these films were nominated for Oscars in 2018</string>
+    <string name="question_6">Who won Oscar as the best supporting actor for his role as Officer Jason Dixon in 2018</string>
 </resources>
