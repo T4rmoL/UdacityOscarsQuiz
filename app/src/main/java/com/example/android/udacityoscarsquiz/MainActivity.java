@@ -1,6 +1,5 @@
 package com.example.android.udacityoscarsquiz;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -155,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
             score++;
         }
 
-        if (cb1a.isChecked() & (cb1c.isChecked()))  {
+        if (cb1a.isChecked() && cb1c.isChecked() && !cb1b.isChecked() && !cb1d.isChecked()) {
             score++;
         }
 
