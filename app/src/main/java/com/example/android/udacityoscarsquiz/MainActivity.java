@@ -89,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
         rb5b.setTypeface(font);
         rb5c.setTypeface(font);
         rb5d.setTypeface(font);
+        cb1a.setTypeface(font);
+        cb1b.setTypeface(font);
+        cb1c.setTypeface(font);
+        cb1d.setTypeface(font);
         nameSpace = findViewById(R.id.name_space);
         answer6 = findViewById(R.id.answer6);
         rg1 = findViewById(R.id.rg1);
