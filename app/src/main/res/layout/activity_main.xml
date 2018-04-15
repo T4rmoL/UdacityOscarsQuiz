@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-
         android:orientation="vertical">
 
         <LinearLayout
@@ -46,7 +45,7 @@
             style="@style/EditTextView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:imeOptions="actionDone"/>
+            android:imeOptions="actionDone" />
 
 
         <TextView
@@ -98,14 +97,13 @@
             </RadioGroup>
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                style="@style/Portrait"
                 android:id="@+id/katherine_image"
+                style="@style/Portrait"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:civ_border_color="@color/bgColor"
-                app:civ_border_width="2dp"
                 android:src="@drawable/cathrine"
-                 />
+                app:civ_border_color="@color/bgColor"
+                app:civ_border_width="2dp" />
 
 
         </LinearLayout>
@@ -341,7 +339,6 @@
         </LinearLayout>
 
 
-
         <TextView
             android:id="@+id/question6_text"
             style="@style/QuestionTextView"
@@ -364,40 +361,39 @@
             android:text="@string/question_7" />
 
         <LinearLayout
+            style="@style/RadioGroupView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            style="@style/RadioGroupView"
             android:orientation="vertical">
 
 
-                <CheckBox
-                    android:id="@+id/cb1a"
-                    style="@style/RadioButtonView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_7_1" />
+            <CheckBox
+                android:id="@+id/cb1a"
+                style="@style/RadioButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_7_1" />
 
-                <CheckBox
-                    android:id="@+id/cb1b"
-                    style="@style/RadioButtonView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_7_2" />
+            <CheckBox
+                android:id="@+id/cb1b"
+                style="@style/RadioButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_7_2" />
 
-                <CheckBox
-                    android:id="@+id/cb1c"
-                    style="@style/RadioButtonView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_7_3" />
+            <CheckBox
+                android:id="@+id/cb1c"
+                style="@style/RadioButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_7_3" />
 
-                <CheckBox
-                    android:id="@+id/cb1d"
-                    style="@style/RadioButtonView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_7_4" />
-
+            <CheckBox
+                android:id="@+id/cb1d"
+                style="@style/RadioButtonView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_7_4" />
 
 
         </LinearLayout>
