@@ -73,7 +73,6 @@
                     style="@style/RadioButtonView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/courierprime"
                     android:text="@string/answer_1" />
 
                 <RadioButton
@@ -136,7 +135,6 @@
                     style="@style/RadioButtonView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/courierprime"
                     android:text="@string/answer_4_1" />
 
                 <RadioButton
@@ -179,7 +177,7 @@
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/kunal_image"
-                style="@style/Portrait"
+                style="@style/Portrait1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -199,8 +197,6 @@
                     style="@style/RadioButtonView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/courierprime"
-
                     android:text="@string/answer_2_1" />
 
                 <RadioButton
@@ -253,7 +249,6 @@
                     style="@style/RadioButtonView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/courierprime"
                     android:onClick="onRadioButtonClicked"
                     android:text="@string/answer_5_1" />
 
@@ -309,7 +304,6 @@
                     style="@style/RadioButtonView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/courierprime"
                     android:text="@string/answer_3_1" />
 
                 <RadioButton
@@ -339,12 +333,14 @@
                 style="@style/Portrait"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/lyla1"
+                android:src="@drawable/lyla2"
                 app:civ_border_color="@color/bgColor"
                 app:civ_border_width="2dp" />
 
 
         </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/question6_text"

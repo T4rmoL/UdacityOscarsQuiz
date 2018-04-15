@@ -111,4 +111,11 @@
         <item name="android:padding">@dimen/margin_6</item>
     </style>
 
+    <style name="Portrait1">
+        <item name="android:layout_marginBottom">@dimen/margin_16</item>
+        <item name="android:layout_marginStart">@dimen/margin_8</item>
+        <item name="android:background">@drawable/frame_bg</item>
+        <item name="android:padding">@dimen/margin_6</item>
+    </style>
+
 </resources>
